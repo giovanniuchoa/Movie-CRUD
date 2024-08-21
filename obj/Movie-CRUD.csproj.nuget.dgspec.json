@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD\\Movie-CRUD.csproj": {}
+    "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD\\Movie-CRUD.csproj": {
+    "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD\\Movie-CRUD.csproj",
+        "projectUniqueName": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD.csproj",
         "projectName": "Movie-CRUD",
-        "projectPath": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD\\Movie-CRUD.csproj",
+        "projectPath": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD.csproj",
         "packagesPath": "C:\\Users\\Giovanni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Movie-CRUD\\obj\\",
+        "outputPath": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Giovanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

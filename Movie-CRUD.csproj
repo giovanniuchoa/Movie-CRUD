@@ -7,4 +7,8 @@
     <RootNamespace>Movie_CRUD</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.0.0" />
+  </ItemGroup>
+
 </Project>
