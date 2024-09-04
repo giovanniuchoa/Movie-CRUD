@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\",
+  "WorkspaceRootPath": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\api-car\\movie-crud\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\movie-crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\movie-crud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\movie-crud\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\api-car\\movie-crud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\movie-crud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,15 +26,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T23:49:16.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-28T23:40:16.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -35,13 +69,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Giovanni\\Desktop\\API-car\\Movie-CRUD\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACkAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-21T00:53:44.292Z",
               "EditorCaption": ""
