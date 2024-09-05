@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5AbVkZio0TCDb8OUqDxZC/lKDsIRvOkmeJjw+0BN03M=",
+  "Hash": "XoHG56c/6X7XEosKCv8Rvd7okdMzgU1IeWCsQYfzkBo=",
   "Source": "Movie-CRUD",
   "BasePath": "_content/Movie-CRUD",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\wwwroot\\Images\\delete-user.png",
+      "SourceId": "Movie-CRUD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\wwwroot\\",
+      "BasePath": "_content/Movie-CRUD",
+      "RelativePath": "Images/delete-user.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\delete-user.png"
     },
     {
       "Identity": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\wwwroot\\js\\site.js",

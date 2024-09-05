@@ -1,3 +1,5 @@
+@using Movie_CRUD.Models
+@model List<MovieModel>
 @{
 
 }
@@ -39,7 +41,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -65,17 +66,31 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                        <button class="btn-delete"><i class="fas fa-trash-alt"></i></button>
-                    </td>
-                    <td>1</td>
-                    <td>Inception</td>
-                    <td>Sci-Fi</td>
-                    <td>2010</td>
-                    <td>148 min</td>
-                </tr>
+
+
+                @if (Model != null && Model.Any())
+                {
+                    foreach (MovieModel movie in Model)
+                    {
+
+                        <tr>
+
+                            <td>
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+
+                            <td>@movie.idMovie</td>
+                            <td>@movie.movieName</td>
+                            <td>@movie.movieCategory</td>
+                            <td>@movie.movieYear</td>
+                            <td>@movie.movieDuration min</td>
+
+                        </tr>
+
+                    }
+                }
+
                 <!-- Outras linhas aqui -->
             </tbody>
         </table>
