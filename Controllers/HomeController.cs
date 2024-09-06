@@ -48,6 +48,18 @@ namespace Movie_CRUD.Controllers
 
         }
 
+        /* Delete Movie */
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteConfirm(int idMovie)
+        {
+
+            await DeleteMovieAsync(idMovie);
+
+            return RedirectToAction("Index");
+
+        }
+
         public async Task<ReturnModel> DeleteMovieAsync(int idMovie)
         {
 
@@ -91,6 +103,126 @@ namespace Movie_CRUD.Controllers
 
                 ret.Erro = true;
                 ret.Mensagem = $"Error deleting movie: {ex.Message}";
+
+            }
+
+            return ret;
+
+        }
+
+        /* Edit Movie */
+
+        public async Task<IActionResult> EditConfirm(int idMovie)
+        {
+
+            await DeleteMovieAsync(idMovie);
+
+            return RedirectToAction("Index");
+
+        }
+
+        public async Task<ReturnModel> EditMovieAsync(int idMovie)
+        {
+
+            var connString = "Server=127.0.0.1;Port=3306;User ID=root;Database=moviecrud";
+
+            await using var connection = new MySqlConnection(connString);
+            await connection.OpenAsync();
+
+            var ret = new ReturnModel();
+
+            try
+            {
+
+                using (var command = new MySqlCommand("DELETE FROM movie WHERE idMovie = @idMovie", connection))
+                {
+
+                    command.Parameters.AddWithValue("@idMovie", idMovie);
+
+                    int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                    if (rowsAffected > 0)
+                    {
+
+                        ret.Erro = false;
+                        ret.Mensagem = "Movie deleted successfully.";
+
+                    }
+                    else
+                    {
+
+                        ret.Erro = true;
+                        ret.Mensagem = "No movie was found with the provided id.";
+
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                ret.Erro = true;
+                ret.Mensagem = $"Error deleting movie: {ex.Message}";
+
+            }
+
+            return ret;
+
+        }
+
+        /* Create Movie */
+
+        public async Task<IActionResult> CreateConfirm(string movieName, string movieCategory, int movieYear, decimal movieDuration)
+        {
+
+            await CreateMovieAsync(movieName,movieCategory,movieYear,movieDuration);
+
+            return RedirectToAction("Index");
+
+        }
+
+        public async Task<ReturnModel> CreateMovieAsync(string movieName, string movieCategory, int movieYear, decimal movieDuration)
+        {
+
+            var connString = "Server=127.0.0.1;Port=3306;User ID=root;Database=moviecrud";
+
+            await using var connection = new MySqlConnection(connString);
+            await connection.OpenAsync();
+
+            var ret = new ReturnModel();
+
+            try
+            {
+
+                using (var command = new MySqlCommand(
+                    "INSERT INTO `moviecrud`.`movie` (`movieName`, `movieCategory`, `movieYear`, `movieDuration`) " +
+                    "VALUES (@movieName, @movieCategory, @movieYear, @movieDuration);", connection))
+                {
+
+                    command.Parameters.AddWithValue("@movieName", movieName);
+                    command.Parameters.AddWithValue("@movieCategory", movieCategory);
+                    command.Parameters.AddWithValue("@movieYear", movieYear);
+                    command.Parameters.AddWithValue("@movieDuration", movieDuration);
+
+                    int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                    if (rowsAffected > 0)
+                    {
+
+                        ret.Erro = false;
+                        ret.Mensagem = "Movie created successfully.";
+
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                ret.Erro = true;
+                ret.Mensagem = $"Error creating movie: {ex.Message}";
 
             }
 

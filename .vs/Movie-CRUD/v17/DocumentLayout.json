@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\movie-crud\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\movie-crud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|c:\\users\\giovanni\\desktop\\movie-crud\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89B75F4E-8229-433B-A88F-7461AE0E8D15}|Movie-CRUD.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACMAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-21T00:53:44.292Z",
               "IsPinned": true,
@@ -36,13 +36,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAADIAAABEAAAA",
+              "ViewState": "AQIAALgAAAAAAAAAAAAwwL4AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T00:55:06.556Z",
               "IsPinned": true,

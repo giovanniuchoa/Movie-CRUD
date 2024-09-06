@@ -1,7 +1,8 @@
 @using Movie_CRUD.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model List<MovieModel>
 @{
-
+    ViewData["Title"] = "Home";
 }
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -25,12 +26,16 @@
         // Envio do formulário (opcional)
         $("#movieForm").on("submit", function (event) {
             event.preventDefault();
-            // Lógica para salvar os dados
-            alert("Movie added successfully!");
-            $("body").removeClass("modal-open");
-            $("#movieModal").hide();
+            var name = $('#name').val();
+            var category = $('#category').val();
+            var year = $('#year').val();
+            var duration = $('#duration').val();
+            var url = `/Home/CreateConfirm?movieName=${name}&movieCategory=${category}&movieYear=${year}&movieDuration=${duration}`;
+            $(this).attr('href', url);
+            window.location.href = url;
         });
     });
+
 </script>
 
 
@@ -75,9 +80,11 @@
 
                         <tr>
 
+
+
                             <td>
                                 <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                                <button class="btn-delete"><i class="fas fa-trash-alt"></i></button>
+                                <a class="btn-delete" role="button" asp-route-idMovie="@movie.idMovie" asp-controller="Home" asp-action="DeleteConfirm"><i class="fas fa-trash-alt"></i></a>
                             </td>
 
                             <td>@movie.idMovie</td>
@@ -114,7 +121,8 @@
                 <label for="duration">Duration (min):</label>
                 <input type="number" id="duration" name="duration" required>
 
-                <button type="submit" class="btn-submit">Add Movie</button>
+                <button id="addMovieLink" class="btn-submit" >Add Movie</button>
+
             </form>
         </div>
     </div>
