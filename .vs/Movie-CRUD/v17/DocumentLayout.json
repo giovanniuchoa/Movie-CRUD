@@ -31,8 +31,7 @@
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-21T00:53:44.292Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -42,7 +41,7 @@
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAALgAAAAAAAAAAAAwwL4AAAApAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAcwPEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T00:55:06.556Z",
               "IsPinned": true,
