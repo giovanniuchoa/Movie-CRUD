@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\wwwroot\\Images\\delete-user.png",
-      "PackagePath": "staticwebassets\\Images\\delete-user.png"
-    },
-    {
       "Id": "C:\\Users\\Giovanni\\Desktop\\Movie-CRUD\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

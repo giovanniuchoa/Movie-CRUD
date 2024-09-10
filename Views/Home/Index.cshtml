@@ -34,6 +34,38 @@
             $(this).attr('href', url);
             window.location.href = url;
         });
+
+
+
+
+
+        // Mostrar a modal e desativar a rolagem na página principal
+        $(".btn-edit").on("click", function () {
+            $("body").addClass("modal-open");
+            $("#movieModalEdit").show();
+        });
+
+        // Fechar a modal e reativar a rolagem na página principal
+        $(".close, #movieModalEdit").on("click", function (event) {
+            if ($(event.target).is(".close") || $(event.target).is("#movieModalEdit")) {
+                $("body").removeClass("modal-open");
+                $("#movieModalEdit").hide();
+            }
+        });
+
+        // Envio do formulário (opcional)
+        $("#movieFormEdit").on("submit", function (event) {
+            event.preventDefault();
+            var name = $('#nameEdit').val();
+            var category = $('#categoryEdit').val();
+            var year = $('#yearEdit').val();
+            var duration = $('#durationEdit').val();
+            var url = `/Home/CreateConfirm?movieName=${name}&movieCategory=${category}&movieYear=${year}&movieDuration=${duration}`;
+            $(this).attr('href', url);
+            window.location.href = url;
+        });
+
+
     });
 
 </script>
@@ -122,6 +154,30 @@
                 <input type="number" id="duration" name="duration" required>
 
                 <button id="addMovieLink" class="btn-submit" >Add Movie</button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Editar Filme -->
+    <div id="movieModalEdit" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Movie</h2>
+            <form id="movieFormEdit">
+                <label for="nameEdit">Name:</label>
+                <input type="text" id="nameEdit" name="nameEdit" required>
+
+                <label for="categoryEdit">Category:</label>
+                <input type="text" id="categoryEdit" name="categoryEdit" required>
+
+                <label for="yearEdit">Year:</label>
+                <input type="number" id="yearEdit" name="yearEdit" required>
+
+                <label for="durationEdit">Duration (min):</label>
+                <input type="number" id="durationEdit" name="durationEdit" required>
+
+                <button id="editMovieLink" class="btn-submit">Add Movie</button>
 
             </form>
         </div>
