@@ -88,6 +88,15 @@
         });
 
 
+        $("#searchBar").on("keypress", function () {
+            if (event.which === 13) { // Verifica se a tecla pressionada é Enter
+                var movieName = $("#searchBar").val();
+                var url = `/Home/GetMovieSearchBar?movieName=${movieName}`;
+                window.location.href = url;
+            }
+        });
+
+
     });
 
 </script>
@@ -109,7 +118,7 @@
 
     <div class="container">
         <div class="actions">
-            <input type="text" placeholder="Search...">
+            <input id="searchBar" type="text" placeholder="Search...">
             <button class="btn-add"><i class="fas fa-plus"></i> Add Movie</button>
         </div>
 

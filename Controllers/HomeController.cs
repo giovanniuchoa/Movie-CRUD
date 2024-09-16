@@ -8,8 +8,16 @@ namespace Movie_CRUD.Controllers
     {
         public async Task<IActionResult> Index()
         {
+            List<MovieModel> temp = new List<MovieModel>();
 
-            List<MovieModel> temp = await GetMovieAsync();
+            if (TempData["MovieList"] != null)
+            {
+                temp = Newtonsoft.Json.JsonConvert.DeserializeObject<List<MovieModel>>(TempData["MovieList"].ToString());
+            }
+            else
+            {
+                temp = await GetMovieAsync();
+            }
 
             return View(temp);
         }
@@ -147,6 +155,53 @@ namespace Movie_CRUD.Controllers
 
             return movieModel;
         }
+
+        public async Task<IActionResult> GetMovieSearchBar(string movieName)
+        {
+            List<MovieModel> temp = await GetMovieByNameAsync(movieName);
+
+            TempData["MovieList"] = Newtonsoft.Json.JsonConvert.SerializeObject(temp);
+
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public async Task<List<MovieModel>> GetMovieByNameAsync(string movieName)
+        {
+            var connString = "Server=127.0.0.1;Port=3306;User ID=root;Database=moviecrud";
+
+            await using var connection = new MySqlConnection(connString);
+            await connection.OpenAsync();
+
+            var moviesList = new List<MovieModel>();
+
+            using (var command = new MySqlCommand("SELECT * FROM movie WHERE movieName LIKE @movieName", connection))
+            {
+                command.Parameters.Add("@movieName", MySqlDbType.VarChar).Value = "%" + movieName + "%";
+
+                using var reader = await command.ExecuteReaderAsync();
+
+                while (await reader.ReadAsync())
+                {
+
+                    var movie = new MovieModel
+                    {
+                        idMovie = reader.GetInt32(0),
+                        movieName = reader.GetString(1),
+                        movieCategory = reader.GetString(2),
+                        movieYear = reader.GetInt32(3),
+                        movieDuration = reader.GetDecimal(4)
+                    };
+
+                    moviesList.Add(movie);
+                }
+
+            }
+
+            return moviesList;
+        }
+
 
         #endregion
 

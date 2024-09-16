@@ -79,3 +79,4 @@ C:\Users\Giovanni\Desktop\Movie-CRUD\obj\Debug\net8.0\Movie-CRUD.genruntimeconfi
 C:\Users\Giovanni\Desktop\Movie-CRUD\obj\Debug\net8.0\ref\Movie-CRUD.dll
 C:\Users\Giovanni\Desktop\Movie-CRUD\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\Giovanni\Desktop\Movie-CRUD\bin\Debug\net8.0\MySqlConnector.DependencyInjection.dll
+C:\Users\Giovanni\Desktop\Movie-CRUD\bin\Debug\net8.0\Newtonsoft.Json.dll
