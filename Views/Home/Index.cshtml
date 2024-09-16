@@ -8,6 +8,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
+
+    var movieId = null;
+
     $(document).ready(function () {
         // Mostrar a modal e desativar a rolagem na página principal
         $(".btn-add").on("click", function () {
@@ -43,6 +46,24 @@
         $(".btn-edit").on("click", function () {
             $("body").addClass("modal-open");
             $("#movieModalEdit").show();
+
+            movieId = $(this).data("id");
+
+            $.ajax({
+                url: `/Home/GetMovieById?idMovie=${movieId}`, // URL da action GetMovie
+                method: "GET",
+                success: function (movie) {
+                    // Preencher os campos com os dados do filme
+                    $('#nameEdit').val(movie.movieName);
+                    $('#categoryEdit').val(movie.movieCategory);
+                    $('#yearEdit').val(movie.movieYear);
+                    $('#durationEdit').val(movie.movieDuration);
+                },
+                error: function () {
+                    alert("Erro ao buscar os dados do filme.");
+                }
+            });
+
         });
 
         // Fechar a modal e reativar a rolagem na página principal
@@ -56,11 +77,12 @@
         // Envio do formulário (opcional)
         $("#movieFormEdit").on("submit", function (event) {
             event.preventDefault();
+            var idMovie = movieId;
             var name = $('#nameEdit').val();
             var category = $('#categoryEdit').val();
             var year = $('#yearEdit').val();
             var duration = $('#durationEdit').val();
-            var url = `/Home/CreateConfirm?movieName=${name}&movieCategory=${category}&movieYear=${year}&movieDuration=${duration}`;
+            var url = `/Home/EditConfirm?idMovie=${idMovie}&movieName=${name}&movieCategory=${category}&movieYear=${year}&movieDuration=${duration}`;
             $(this).attr('href', url);
             window.location.href = url;
         });
@@ -115,7 +137,7 @@
 
 
                             <td>
-                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-edit" data-id="@movie.idMovie"><i class="fas fa-edit"></i></button>
                                 <a class="btn-delete" role="button" asp-route-idMovie="@movie.idMovie" asp-controller="Home" asp-action="DeleteConfirm"><i class="fas fa-trash-alt"></i></a>
                             </td>
 

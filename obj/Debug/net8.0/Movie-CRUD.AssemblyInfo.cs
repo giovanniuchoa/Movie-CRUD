@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Movie-CRUD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60a95d6b112c602268aa3e86d3ce6f52f02d1231")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d363bc457d9e863839461ec05efb3cc5fee264db")]
 [assembly: System.Reflection.AssemblyProductAttribute("Movie-CRUD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Movie-CRUD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
